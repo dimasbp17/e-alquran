@@ -9,7 +9,7 @@ const AlQuranHome = () => {
         <section>
           <Menus />
         </section>
-        <section className="grid grid-cols-3 gap-3">
+        <section className="grid grid-cols-1 gap-5 md:grid-cols-3">
           <Quran />
         </section>
       </div>
