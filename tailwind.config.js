@@ -29,6 +29,8 @@ module.exports = withMT({
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        hitamTua: '#121928',
+        hitamMuda: '#1D2432',
       },
     },
   },
