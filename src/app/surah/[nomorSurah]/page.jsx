@@ -43,7 +43,7 @@ const DetailSurah = () => {
             className="my-10 text-justify text-white md:px-20"
           >
             {/* Teks Arab */}
-            <div className="text-4xl leading-[60px] text-end font-misbah">
+            <div className="text-4xl leading-[80px] text-end font-misbah">
               {ayat.teksArab}
             </div>
 
@@ -51,7 +51,7 @@ const DetailSurah = () => {
             <div className="mt-10 text-lg text-green-400">{ayat.teksLatin}</div>
 
             {/* Terjemahan Bahasa Indonesia */}
-            <div className="text-lg">{ayat.teksIndonesia}</div>
+            <div className="mt-6 text-lg">{ayat.teksIndonesia}</div>
 
             <hr className="my-5" />
           </div>
