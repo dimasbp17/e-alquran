@@ -25,3 +25,10 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: 'LPMQ Misbah';
+  src: url('/fonts/lpmq-misbah.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

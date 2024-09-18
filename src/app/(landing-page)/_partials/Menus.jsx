@@ -6,25 +6,33 @@ import Link from 'next/link';
 import React from 'react';
 import quran from '@/assets/images/quran.png';
 import doa from '@/assets/svg/doa.svg';
+import menu from './menu';
 
 const Menus = () => {
   return (
     <>
       <div className="w-full p-3 bg-[#121928] rounded-xl my-5">
-        <div className="grid grid-cols-2 gap-5">
-          <div className="flex items-center justify-end w-full ">
-            <Link href={'/'}>
-              <Card className="flex items-center justify-center w-28 h-28 bg-[#023B32] text-white">
+        <div className="grid grid-cols-4 gap-5">
+          {menu.map((menu, index) => (
+            <Link
+              href={menu.href}
+              className="w-full"
+              key={index}
+            >
+              <Card className="flex items-center justify-center w-full h-28 bg-[#023B32] text-white">
                 <Image
-                  src={quran}
+                  src={menu.image}
                   alt="Al-Quran"
                   className="size-20"
+                  width={1024}
+                  height={1024}
                 />
-                Al-Qur&apos;an
+                {menu.title}
               </Card>
             </Link>
-          </div>
-          <div className="flex items-center justify-start">
+          ))}
+
+          {/* <div className="flex items-center justify-start">
             <Link href={'/doa-harian'}>
               <Card className="flex items-center justify-center w-28 h-28 bg-[#023B32] text-white">
                 <Image
@@ -35,7 +43,7 @@ const Menus = () => {
                 Doa
               </Card>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
