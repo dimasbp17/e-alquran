@@ -32,6 +32,9 @@ module.exports = withMT({
         hitamTua: '#121928',
         hitamMuda: '#1D2432',
       },
+      fontFamily: {
+        misbah: ['LPMQ Misbah', 'sans-serif'],
+      },
     },
   },
   plugins: [],

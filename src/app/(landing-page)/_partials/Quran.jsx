@@ -11,8 +11,8 @@ const Quran = () => {
   useEffect(() => {
     const fetchQuran = async () => {
       try {
-        const response = await axios.get(`https://equran.id/api/surat`);
-        setData(response.data);
+        const response = await axios.get(`https://equran.id/api/v2/surat`);
+        setData(response.data.data);
         console.log(response.data);
       } catch (error) {
         console.error('Error fetching al-quran', error);
@@ -36,12 +36,12 @@ const Quran = () => {
             </div>
             <div className="flex flex-col w-full gap-1 text-white">
               <div className="flex justify-between w-full">
-                <div className="font-semibold">{surah.nama_latin}</div>
+                <div className="font-semibold">{surah.namaLatin}</div>
                 <div>{surah.nama}</div>
               </div>
               <div className="flex justify-between flex-grow w-full text-gray-300">
                 <div className="text-xs">{surah.arti}</div>
-                <div className="text-xs">{surah.jumlah_ayat} ayat</div>
+                <div className="text-xs">{surah.jumlahAyat} ayat</div>
               </div>
             </div>
           </Card>
