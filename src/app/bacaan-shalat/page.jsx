@@ -45,12 +45,6 @@ const BacaanShalat = () => {
             <hr className="my-5" />
           </div>
         ))}
-        <Card className="p-3 my-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          nisi ipsa eos accusantium aliquid suscipit, quod ducimus, ea minima
-          quidem fuga saepe accusamus harum ratione. Incidunt quos non numquam
-          enim.
-        </Card>
       </div>
     </>
   );
