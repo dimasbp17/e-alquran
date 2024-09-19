@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import Search from './Search';
 
 const Navbar = () => {
   return (
@@ -8,7 +9,9 @@ const Navbar = () => {
         <Link href={'/'}>
           <div className="text-2xl font-bold">E-Alqur&apos;an</div>
         </Link>
-        <div>Search</div>
+        <div>
+          <Search placeholder={'Cari surah'} />
+        </div>
       </div>
     </>
   );

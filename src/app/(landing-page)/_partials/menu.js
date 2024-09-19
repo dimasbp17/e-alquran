@@ -14,6 +14,11 @@ const menu = [
     image: '/assets/svg/shalat.svg',
     title: 'Bacaan Shalat',
   },
+  {
+    href: '/bacaan-shalat',
+    image: '/assets/svg/shalat.svg',
+    title: 'Ayat Kursi',
+  },
 ];
 
 export default menu;

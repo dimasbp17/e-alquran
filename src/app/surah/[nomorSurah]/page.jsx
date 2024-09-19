@@ -1,5 +1,6 @@
 'use client';
 
+import Loading from '@/components/Loading';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
@@ -23,7 +24,12 @@ const DetailSurah = () => {
     fetchSurah();
   }, [nomorSurah]);
 
-  if (!surah) return <div>Loading...</div>;
+  if (!surah)
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Loading />
+      </div>
+    );
 
   return (
     <>
