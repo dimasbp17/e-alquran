@@ -1,8 +1,10 @@
 'use client';
 
-import { Card } from '@material-tailwind/react';
+import { Card, IconButton } from '@material-tailwind/react';
 import axios from 'axios';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { FaArrowLeft } from 'react-icons/fa6';
 
 const BacaanShalat = () => {
   const [bacaanShalat, setBacaanShalat] = useState([]);
@@ -13,7 +15,6 @@ const BacaanShalat = () => {
           'https://islamic-api-zhirrr.vercel.app/api/bacaanshalat'
         );
         setBacaanShalat(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error('Error fetching bacaan', error);
       }
@@ -22,6 +23,16 @@ const BacaanShalat = () => {
   }, []);
   return (
     <>
+      <section className="flex items-center justify-between w-full px-40 py-10 bg-[#1E2836]">
+        <div className="flex items-center gap-2">
+          <Link href={'/'}>
+            <IconButton className="rounded-full">
+              <FaArrowLeft />
+            </IconButton>
+          </Link>
+          <span className="font-semibold text-white">Beranda</span>
+        </div>
+      </section>
       <div className="md:px-20">
         {bacaanShalat.map((bacaan) => (
           <div
