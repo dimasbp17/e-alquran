@@ -54,7 +54,7 @@ const BacaanShalatPage = () => {
           <span className="font-semibold text-white">Beranda</span>
         </div>
       </section>
-      <div className="flex items-center justify-center my-10 md:px-20">
+      <div className="flex items-center justify-center my-10 md:px-40">
         {/* {bacaanShalat.map((bacaan) => (
           <div
             key={bacaan.id}
@@ -81,7 +81,7 @@ const BacaanShalatPage = () => {
                 <Tab
                   key={value}
                   value={value}
-                  className=""
+                  className="font-semibold"
                 >
                   {label}
                 </Tab>
