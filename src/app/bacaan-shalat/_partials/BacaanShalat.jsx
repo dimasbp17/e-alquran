@@ -29,18 +29,15 @@ const BacaanShalat = () => {
             key={bacaan.id}
             className="my-10 text-justify text-white"
           >
-            <div className="text-2xl font-bold">
+            <div className="mb-5 text-2xl font-bold">
               {bacaan.id}. {bacaan.name}
             </div>
-            {/* Teks Arab */}
             <div className="text-4xl leading-[80px] text-end font-misbah">
               {bacaan.arabic}
             </div>
 
-            {/* Teks Latin */}
             <div className="mt-10 text-lg text-green-400">{bacaan.latin}</div>
 
-            {/* Terjemahan Bahasa Indonesia */}
             <div className="mt-6 text-lg">{bacaan.terjemahan}</div>
 
             <hr className="my-5" />

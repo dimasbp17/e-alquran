@@ -12,7 +12,7 @@ const NiatShalat = () => {
     const fetchBacaanShalat = async () => {
       try {
         const response = await axios.get(
-          'https://islamic-api-zhirrr.vercel.app/api/bacaanshalat'
+          'https://islamic-api-zhirrr.vercel.app/api/niatshalat'
         );
         setBacaanShalat(response.data);
       } catch (error) {
@@ -32,15 +32,12 @@ const NiatShalat = () => {
             <div className="text-2xl font-bold">
               {bacaan.id}. {bacaan.name}
             </div>
-            {/* Teks Arab */}
             <div className="text-4xl leading-[80px] text-end font-misbah">
               {bacaan.arabic}
             </div>
 
-            {/* Teks Latin */}
             <div className="mt-10 text-lg text-green-400">{bacaan.latin}</div>
 
-            {/* Terjemahan Bahasa Indonesia */}
             <div className="mt-6 text-lg">{bacaan.terjemahan}</div>
 
             <hr className="my-5" />
