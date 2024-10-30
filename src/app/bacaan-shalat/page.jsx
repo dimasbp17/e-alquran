@@ -1,17 +1,15 @@
 'use client';
 
-import { IconButton } from '@material-tailwind/react';
-import axios from 'axios';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import { FaArrowLeft } from 'react-icons/fa6';
 import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
+  IconButton,
   Tab,
   TabPanel,
+  Tabs,
+  TabsBody,
+  TabsHeader,
 } from '@material-tailwind/react';
+import Link from 'next/link';
+import { FaArrowLeft } from 'react-icons/fa6';
 import BacaanShalat from './_partials/BacaanShalat';
 import NiatShalat from './_partials/NiatShalat';
 

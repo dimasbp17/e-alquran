@@ -1,10 +1,7 @@
 'use client';
 
-import { IconButton } from '@material-tailwind/react';
 import axios from 'axios';
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import { FaArrowLeft } from 'react-icons/fa6';
+import { useEffect, useState } from 'react';
 
 const BacaanShalat = () => {
   const [bacaanShalat, setBacaanShalat] = useState([]);

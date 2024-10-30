@@ -6,7 +6,7 @@ const Search = ({ placeholder }) => {
       <div>
         <input
           type="search"
-          className="w-[300px] px-3 py-2 text-black focus:outline-none rounded-xl border border-white"
+          className="lg:w-[300px] px-3 w-full py-2 text-black focus:outline-none rounded-xl border border-white"
           placeholder={placeholder}
         />
       </div>
