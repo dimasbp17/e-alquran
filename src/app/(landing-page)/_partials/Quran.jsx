@@ -59,10 +59,8 @@ const Quran = () => {
             key={data.nomor}
           >
             <Card className="flex flex-row w-full gap-5 p-5 duration-300 border border-white bg-hitamTua hover:scale-105">
-              <div className="flex items-center justify-center text-lg rotate-45 bg-gray-800 rounded-lg size-10">
-                <span className="font-bold text-white -rotate-45">
-                  {surah.nomor}
-                </span>
+              <div className="flex items-center justify-center text-lg bg-gray-800 rounded-full w-14">
+                <span className="font-bold text-white">{surah.nomor}</span>
               </div>
               <div className="flex flex-col w-full gap-1 text-white">
                 <div className="flex justify-between w-full">
