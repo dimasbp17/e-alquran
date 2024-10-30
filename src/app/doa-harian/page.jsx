@@ -3,11 +3,13 @@
 import { Card, IconButton } from '@material-tailwind/react';
 import axios from 'axios';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa6';
 
 const DoaHarian = () => {
   const [doaHarian, setDoaHarian] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchDoaHarian = async () => {
@@ -25,13 +27,14 @@ const DoaHarian = () => {
   }, []);
   return (
     <>
-      <section className="flex items-center justify-between w-full px-40 py-10 bg-[#1E2836]">
-        <div className="flex items-center gap-2">
-          <Link href={'/'}>
-            <IconButton className="rounded-full">
-              <FaArrowLeft />
-            </IconButton>
-          </Link>
+      <section className="flex items-center justify-between w-full md:px-20">
+        <div className="flex items-center gap-2 my-10">
+          <IconButton
+            className="bg-yellow-800 rounded-full"
+            onClick={() => router.back()}
+          >
+            <FaArrowLeft />
+          </IconButton>
           <span className="font-semibold text-white">Beranda</span>
         </div>
       </section>
@@ -39,7 +42,7 @@ const DoaHarian = () => {
         {doaHarian.map((bacaan, index) => (
           <Card
             key={index}
-            className="py-10 my-10 text-justify text-black bg-gray-200 md:px-20"
+            className="py-10 mb-10 text-justify text-black bg-[#F5F7F8] md:px-20"
           >
             <div className="text-2xl font-bold">
               {index + 1}. {bacaan.title}

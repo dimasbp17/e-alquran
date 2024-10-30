@@ -1,17 +1,17 @@
 const menu = [
   {
     href: '/',
-    image: '/assets/images/quran.png',
+    image: '/assets/images/quran2.png',
     title: 'Al-Quran',
   },
   {
     href: '/doa-harian',
-    image: '/assets/svg/doa.svg',
+    image: '/assets/images/doa.png',
     title: 'Doa Harian',
   },
   {
     href: '/bacaan-shalat',
-    image: '/assets/svg/shalat.svg',
+    image: '/assets/images/shalat.png',
     title: 'Bacaan Shalat',
   },
   {
