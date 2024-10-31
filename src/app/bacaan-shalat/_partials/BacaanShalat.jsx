@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 const BacaanShalat = () => {
   const [bacaanShalat, setBacaanShalat] = useState([]);
+
   useEffect(() => {
     const fetchBacaanShalat = async () => {
       try {
@@ -18,9 +19,10 @@ const BacaanShalat = () => {
     };
     fetchBacaanShalat();
   }, []);
+
   return (
     <>
-      <div className="">
+      <div>
         {bacaanShalat.map((bacaan) => (
           <div
             key={bacaan.id}
