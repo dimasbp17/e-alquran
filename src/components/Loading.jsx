@@ -6,7 +6,7 @@ const Loading = () => {
     <>
       <div>
         <Spinner
-          className="size-10 lg:size-16"
+          className="size-10 lg:size-12"
           color="yellow"
         />
       </div>

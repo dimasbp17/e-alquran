@@ -48,6 +48,7 @@ const DoaHarian = () => {
               </IconButton>
               <span className="font-semibold text-white">Beranda</span>
             </div>
+            <h1 className="text-2xl font-bold text-white">Doa Harian</h1>
           </section>
           <div className="px-4 md:px-20">
             {doaHarian.map((bacaan, index) => (
