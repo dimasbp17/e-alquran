@@ -84,7 +84,7 @@ const DetailSurah = () => {
           </span>
           <span>{surah.jumlahAyat} Ayat</span>
         </div>
-        <div className="mt-10 text-justify lg:px-40">
+        <div className="px-4 mt-10 text-justify lg:px-40">
           {cleanDescription(surah.deskripsi)}
         </div>
       </div>

@@ -21,11 +21,11 @@ const menu = [
     title: 'Asmaul Husna',
   },
 
-  {
-    href: '/bacaan-shalat',
-    image: '/assets/images/hadist.png',
-    title: 'Hadist',
-  },
+  // {
+  //   href: '/bacaan-shalat',
+  //   image: '/assets/images/hadist.png',
+  //   title: 'Hadist',
+  // },
 ];
 
 export default menu;

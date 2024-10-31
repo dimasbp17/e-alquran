@@ -72,11 +72,11 @@ const AsmaulHusnaPage = () => {
         </section>
 
         {loading ? (
-          <div className="grid grid-cols-3 gap-3 mb-5 lg:px-20">
+          <div className="grid grid-cols-1 gap-3 mb-5 lg:grid-cols-3 lg:px-20">
             <LoadingSkeleton />
           </div>
         ) : (
-          <div className="grid grid-cols-3 gap-3 mb-5 lg:px-20">
+          <div className="grid grid-cols-1 gap-3 p-4 mb-5 lg:grid-cols-3 lg:px-20">
             {asmaulHusna.map((husna, index) => (
               <Card
                 key={index}

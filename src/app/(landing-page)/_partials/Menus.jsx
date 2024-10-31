@@ -9,7 +9,7 @@ const Menus = () => {
   return (
     <>
       <div className="w-full p-3 bg-[#121928] rounded-xl my-5 border border-white">
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {menu.map((menu, index) => (
             <Link
               href={menu.href}
