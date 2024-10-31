@@ -1,5 +1,6 @@
 'use client';
 
+import Loading from '@/components/Loading';
 import { Card, IconButton, Spinner } from '@material-tailwind/react';
 import axios from 'axios';
 import Link from 'next/link';
@@ -33,14 +34,11 @@ const DoaHarian = () => {
     <>
       {loading ? (
         <div className="flex items-center justify-center h-screen">
-          <Spinner
-            color="yellow"
-            className="size-16"
-          />
+          <Loading />
         </div>
       ) : (
         <>
-          <section className="flex items-center justify-between w-full md:px-20">
+          <section className="flex items-center justify-between w-full px-4 md:px-20">
             <div className="flex items-center gap-2 my-10">
               <IconButton
                 className="bg-yellow-800 rounded-full"
@@ -51,11 +49,11 @@ const DoaHarian = () => {
               <span className="font-semibold text-white">Beranda</span>
             </div>
           </section>
-          <div className="md:px-20">
+          <div className="px-4 md:px-20">
             {doaHarian.map((bacaan, index) => (
               <Card
                 key={index}
-                className="p-10 mb-10 text-justify text-black bg-[#F5F7F8]"
+                className="p-5 lg:p-10 mb-10 text-justify text-black bg-[#F5F7F8]"
               >
                 <div className="text-2xl font-bold">
                   {index + 1}. {bacaan.title}

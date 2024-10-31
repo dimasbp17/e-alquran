@@ -14,10 +14,17 @@ const menu = [
     image: '/assets/images/shalat.png',
     title: 'Bacaan Shalat',
   },
+
+  {
+    href: '/asmaul-husna',
+    image: '/assets/images/asmaul-husna.png',
+    title: 'Asmaul Husna',
+  },
+
   {
     href: '/bacaan-shalat',
-    image: '/assets/svg/shalat.svg',
-    title: 'Ayat Kursi',
+    image: '/assets/images/hadist.png',
+    title: 'Hadist',
   },
 ];
 

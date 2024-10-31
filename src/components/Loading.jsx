@@ -5,7 +5,10 @@ const Loading = () => {
   return (
     <>
       <div>
-        <Spinner className="size-10" />
+        <Spinner
+          className="size-10 lg:size-16"
+          color="yellow"
+        />
       </div>
     </>
   );
