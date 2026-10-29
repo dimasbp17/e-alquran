@@ -3,27 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canvas: 250 249 246;
+  --surface: 255 255 255;
+  --subtle: 243 241 236;
+  --ink: 28 32 36;
+  --muted: 103 109 115;
+  --line: 230 227 220;
+  --brand: 15 118 110;
+  --brand-soft: 231 243 240;
+  --gold: 170 132 66;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  /* color: var(--foreground); */
-  /* background: var(--background); */
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.dark {
+  --canvas: 14 18 20;
+  --surface: 22 27 30;
+  --subtle: 31 37 41;
+  --ink: 236 236 232;
+  --muted: 152 158 163;
+  --line: 42 49 54;
+  --brand: 94 194 178;
+  --brand-soft: 22 48 46;
+  --gold: 212 177 110;
+  color-scheme: dark;
 }
 
 @font-face {
@@ -31,4 +33,59 @@ body {
   src: url('/fonts/lpmq-misbah.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand/20;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply w-full max-w-6xl px-4 mx-auto sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply border bg-surface border-line rounded-2xl shadow-soft;
+  }
+
+  .card-hover {
+    @apply transition duration-200 hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md;
+  }
+
+  .arabic {
+    @apply text-3xl font-misbah leading-[2.3] text-right md:text-4xl md:leading-[2.3];
+  }
+
+  .skeleton {
+    @apply rounded-md bg-subtle animate-pulse;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }

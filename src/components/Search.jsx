@@ -1,16 +1,21 @@
-import React from 'react';
+import { LuSearch } from 'react-icons/lu';
 
-const Search = ({ placeholder }) => {
+const Search = ({ placeholder, value, onChange, className = '' }) => {
   return (
-    <>
-      <div>
-        <input
-          type="search"
-          className="lg:w-[300px] px-3 w-full py-2 text-black focus:outline-none rounded-xl border border-white"
-          placeholder={placeholder}
-        />
-      </div>
-    </>
+    <label className={`relative block ${className}`}>
+      <span className="sr-only">{placeholder}</span>
+      <LuSearch
+        size={18}
+        className="absolute -translate-y-1/2 pointer-events-none left-4 top-1/2 text-muted"
+      />
+      <input
+        type="search"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="w-full h-12 pr-4 text-base transition border outline-none pl-11 rounded-xl bg-surface border-line placeholder:text-muted/80 focus:border-brand focus:ring-4 focus:ring-brand/10"
+      />
+    </label>
   );
 };
 

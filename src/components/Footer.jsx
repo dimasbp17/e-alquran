@@ -1,13 +1,24 @@
-import React from 'react';
-
 const Footer = () => {
   return (
-    <>
-      <div className="w-full py-10 text-white flex items-center justify-center bg-[#121928] mt-10">
-        <span className="mr-2 text-lg font-bold">E-AlQur&apos;an</span>
-        <span className="text-xs">Copyright 2024</span>
+    <footer className="mt-20 border-t border-line">
+      <div className="flex flex-col items-center justify-between gap-2 py-8 text-sm text-center container-page sm:flex-row sm:text-left text-muted">
+        <span>
+          <span className="font-semibold text-ink">E-Alqur&apos;an</span> ·
+          Baca, dengar, dan pahami.
+        </span>
+        <span>
+          Sumber data:{' '}
+          <a
+            href="https://equran.id"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4 hover:text-brand"
+          >
+            equran.id
+          </a>
+        </span>
       </div>
-    </>
+    </footer>
   );
 };
 
