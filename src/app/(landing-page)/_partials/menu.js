@@ -1,31 +1,30 @@
+import { LuBookOpen, LuHeart, LuSparkles, LuSunrise } from 'react-icons/lu';
+
 const menu = [
   {
-    href: '/',
-    image: '/assets/images/quran2.png',
-    title: 'Al-Quran',
+    href: '#surah',
+    icon: LuBookOpen,
+    title: "Al-Qur'an",
+    description: '114 surah & murottal',
   },
   {
     href: '/doa-harian',
-    image: '/assets/images/doa.png',
+    icon: LuHeart,
     title: 'Doa Harian',
+    description: 'Doa untuk keseharian',
   },
   {
     href: '/bacaan-shalat',
-    image: '/assets/images/shalat.png',
+    icon: LuSunrise,
     title: 'Bacaan Shalat',
+    description: 'Niat & bacaan shalat',
   },
-
   {
     href: '/asmaul-husna',
-    image: '/assets/images/asmaul-husna.png',
+    icon: LuSparkles,
     title: 'Asmaul Husna',
+    description: '99 nama Allah',
   },
-
-  // {
-  //   href: '/bacaan-shalat',
-  //   image: '/assets/images/hadist.png',
-  //   title: 'Hadist',
-  // },
 ];
 
 export default menu;

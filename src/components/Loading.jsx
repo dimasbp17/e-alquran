@@ -1,16 +1,12 @@
-import { Spinner } from '@material-tailwind/react';
-import React from 'react';
-
-const Loading = () => {
+const Loading = ({ label = 'Memuat...' }) => {
   return (
-    <>
-      <div>
-        <Spinner
-          className="size-10 lg:size-12"
-          color="yellow"
-        />
-      </div>
-    </>
+    <div
+      role="status"
+      className="flex flex-col items-center gap-3 text-sm text-muted"
+    >
+      <span className="border-2 rounded-full size-8 border-line border-t-brand animate-spin" />
+      {label}
+    </div>
   );
 };
 

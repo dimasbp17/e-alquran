@@ -1,65 +1,57 @@
 'use client';
 
-import { IconButton } from '@material-tailwind/react';
+import PageHeader from '@/components/PageHeader';
 import { useState } from 'react';
-import { FaArrowLeft } from 'react-icons/fa6';
-import BacaanShalat from './_partials/BacaanShalat';
-import NiatShalat from './_partials/NiatShalat';
-import { useRouter } from 'next/navigation';
+import ShalatList from './_partials/ShalatList';
+
+const tabs = [
+  {
+    label: 'Niat Shalat',
+    endpoint: 'https://islamic-api-zhirrr.vercel.app/api/niatshalat',
+  },
+  {
+    label: 'Bacaan Shalat',
+    endpoint: 'https://islamic-api-zhirrr.vercel.app/api/bacaanshalat',
+  },
+];
 
 const BacaanShalatPage = () => {
-  const [activeTab, setActiveTab] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <>
-      <section className="flex items-center justify-between w-full px-4 md:px-20">
-        <div className="flex items-center gap-2 my-10">
-          <IconButton
-            className="bg-yellow-800 rounded-full"
-            onClick={() => router.back()}
-          >
-            <FaArrowLeft />
-          </IconButton>
-          <span className="font-semibold text-white">Beranda</span>
+      <PageHeader
+        title="Bacaan Shalat"
+        description="Niat dan bacaan shalat lengkap dengan latin dan artinya."
+      >
+        <div
+          role="tablist"
+          className="inline-flex self-start p-1 border rounded-full bg-subtle border-line md:self-auto"
+        >
+          {tabs.map((tab, index) => (
+            <button
+              key={tab.label}
+              type="button"
+              role="tab"
+              aria-selected={activeTab === index}
+              onClick={() => setActiveTab(index)}
+              className={`px-5 py-2 text-sm font-semibold rounded-full transition focus-ring ${
+                activeTab === index
+                  ? 'bg-surface text-brand shadow-soft'
+                  : 'text-muted hover:text-ink'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
-      </section>
+      </PageHeader>
 
-      <div className="px-4 lg:px-20">
-        <div className="flex mb-10 text-lg font-bold">
-          <button
-            className={`py-1 ${
-              activeTab === 1
-                ? 'border-b-2 border-yellow-600 text-yellow-600'
-                : 'text-white'
-            }`}
-            onClick={() => handleTabClick(1)}
-          >
-            Niat Shalat
-          </button>
-          <button
-            className={`py-1 mx-5 ${
-              activeTab === 2
-                ? 'border-b-2 border-yellow-600 text-yellow-600'
-                : 'text-white'
-            }`}
-            onClick={() => handleTabClick(2)}
-          >
-            Bacaan Shalat
-          </button>
-        </div>
-
-        {/* Tab Content */}
-        <div className="">
-          {activeTab === 1 && <NiatShalat />}
-
-          {activeTab === 2 && <BacaanShalat />}
-        </div>
+      <div className="max-w-4xl container-page">
+        <ShalatList
+          key={activeTab}
+          endpoint={tabs[activeTab].endpoint}
+        />
       </div>
     </>
   );
